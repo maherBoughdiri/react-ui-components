@@ -3,5 +3,6 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "declaration": true, // THIS IS IMPORTANT for generating .d.ts files
 }
