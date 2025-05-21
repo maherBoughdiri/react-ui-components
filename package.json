@@ -1,15 +1,23 @@
 {
   "name": "@maherboughdiri/mb-react-ui-kit",
-  "version": "1.0.0-beta",
+  "version": "1.0.6-beta",
   "type": "module",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "./dist/mb-react-ui-kit.umd.js",
+  "module": "./dist/mb-react-ui-kit.es.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/mb-react-ui-kit.es.js",
+      "require": "./dist/mb-react-ui-kit.umd.js"
+    },
+    "./dist/mb-react-ui-kit.css": "./dist/mb-react-ui-kit.css"
+  },
+  "style": "dist/mb-react-ui-kit.css",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3200",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -22,8 +30,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": ">=19.1.0",
+    "react-dom": ">=19.1.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
@@ -40,14 +48,12 @@
     "@vitejs/plugin-react": "^4.4.1",
     "@vitest/browser": "^3.1.4",
     "@vitest/coverage-v8": "^3.1.4",
-    "autoprefixer": "^10.4.21",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-storybook": "^0.12.0",
     "globals": "^16.0.0",
     "playwright": "^1.52.0",
-    "postcss": "^8.5.3",
     "storybook": "^8.6.14",
     "tailwindcss": "^4.1.7",
     "typescript": "~5.8.3",
